@@ -1,6 +1,7 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
-import menu from "../assets/Menu.png";
+import burger from "../assets/Menu.png";
 import search from "../assets/Search (1).png";
 import logo from "../assets/Vector.png";
 import bag from "../assets/shopping bag.png";
@@ -8,10 +9,17 @@ import Link from "next/link";
 import MenuExpand from "./MenuExpand";
 
 const Header = () => {
+    const [menu, setMenu] = useState(false)
+
+    const toggleMenu = () => {
+        setMenu(!menu)
+    }
   return (
     <div className="p-3 sm:p-5 flex justify-between bg-[#E7EAEF]">
-      <MenuExpand />
-      <Image src={menu} alt="menu" className="self-center sm:hidden" />
+      {
+        menu && <MenuExpand toggleMenu={toggleMenu} />
+      }
+      <Image src={burger} alt="menu" onClick={toggleMenu} className="self-center sm:hidden" />
 
       <Image src={logo} alt="menu" className="self-center" />
 
