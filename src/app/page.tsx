@@ -1,10 +1,13 @@
-import Image from "next/image";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
+import NewArrivals from "./components/NewArrivals";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="">
       <Header />
+      <Hero />
+      <NewArrivals />
     </main>
   );
 }
