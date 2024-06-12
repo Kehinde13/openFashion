@@ -11,3 +11,9 @@
 .btn {
     opacity: 0.5;
 }
+
+/* new arrival style */
+.new-arrival ul li:hover {
+   color: #DD8560;
+   cursor: pointer;
+}

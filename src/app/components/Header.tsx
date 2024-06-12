@@ -23,7 +23,7 @@ const Header = () => {
 
       <Image src={logo} alt="menu" className="self-center" />
 
-      <div className="sm:flex justify-between gap-10 text-2xl mt-3 hidden">
+      <div className="sm:flex justify-between gap-10 text-2xl mt-3 hidden border-b">
         <Link href="/" className="hover:text-[#DD8560]">Women</Link>
 
         <Link href="/" className="hover:text-[#DD8560]">Men</Link>
